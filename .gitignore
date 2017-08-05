@@ -105,4 +105,4 @@ ENV/
 *~
 
 # Dave's local storage
-/data 
+/mnist/data 
