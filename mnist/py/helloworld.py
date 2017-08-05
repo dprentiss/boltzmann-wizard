@@ -1,2 +1,7 @@
-# checking out fancy new Windows Sub-Systum for Linux with GIT
-print("Hello, World!")
+import csv
+import matplotlib.pyplot as plt
+
+#with open('mnist/data/test.csv', newline='') as csvfile:
+    #spamreader = csv.reader(csvfile, delimiter=' ')
+    #for row in spamreader:
+        #print(', '.join(row))
