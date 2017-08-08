@@ -1,7 +1,14 @@
+import numpy as np
 import csv
 import matplotlib.pyplot as plt
 
-with open('../data/test.csv', newline='') as csvfile:
-    reader = csv.reader(csvfile, delimiter=' ')
-    next(reader)[0]
-    print(next(reader)[0])
+with open('../data/train.csv', 'r') as csvfile:
+    for data in csv.reader(csvfile):
+        label = data[0]
+        pixels = data[1:]
+        pixels = np.array(pixels, dtype='uint8')
+        pixels = pixels.reshape((28,28))
+        plt.title('Label is {label}'.format(label=label))
+        plt.imshow(pixels, cmap='gray')
+        plt.show()
+        break
